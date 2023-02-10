@@ -74,7 +74,7 @@
     </div>
     
     <div>
-        <p>Pedir tres números enteros con un valor del 1 al 10, sacar el promedio de los tres números y determinar si el promedio es mayor que cinco.</p>
+        <p>5. Pedir tres números enteros con un valor del 1 al 10, sacar el promedio de los tres números y determinar si el promedio es mayor que cinco.</p>
         <fieldset>
             <legend>Entrada:</legend>
             <label for="ej5dato1">Numero 1: </label>
@@ -92,12 +92,12 @@
     </div>
 
     <div>
-        <p>Pedir una cadena de texto y comprobar que todas sus letras estén en minúsculas.</p>
+        <p>6. Pedir una cadena de texto y comprobar que todas sus letras estén en minúsculas.</p>
         <fieldset>
             <legend>Entrada:</legend>
             <label for="ej6dato1">Texto: </label>
             <input type="text" id="ej6dato1" placeholder="Texto...">
-            <button id="butto6" onclick="isInLowerCase()">¿ESTÁ EN MINÚSCULAS?</button>
+            <button id="button6" onclick="isInLowerCase()">¿ESTÁ EN MINÚSCULAS?</button>
         </fieldset>
         <fieldset>
             <legend>Resultado:</legend>
@@ -105,26 +105,86 @@
         </fieldset>
     </div>
 
-    <p>Crear un número aleatorio entre el 1 y 20 y comprobar si es par o impar. Mostrar además el
-    número.</p>
-    <p>Crea un programa que lea tres notas de un alumno, calcule la media e indique si ha aprobado o no.</p>
-    <p>Crea un programa para una tienda de coches: si el coche a la venta es un Ford Fiesta, el descuento es de un 5 %. Si el coche a la venta es un Ford Focus, el descuento es del 10 %. El usuario introduce marca y modelo y el programa saca el descuento correspondiente por pantalla.</p>
-    <p>Crea un programa en el que el usuario introduzca el número del mes (del 1 al 12) y el código
-    responda cuántos días tiene ese mes.</p>
-    <p>Crea un script que pida al usuario el diámetro de una rueda y su grosor (en metros) y realice las
-    siguientes operaciones:</p>
-    <p>a) Si el diámetro es superior a 1.4 metros debe mostrarse el mensaje “La rueda es para un vehículo
-    grande”. Si es menor o igual a 1.4 metros pero mayor que 0.8 debe mostrarse el mensaje “La rueda
-    es para un vehículo mediano”. Si no se cumplen ninguna de las condiciones anteriores debe
-    mostrarse por pantalla el mensaje “La rueda es para un vehículo pequeño”.</p>
-    <p>b) Si el diámetro es superior a 1.4 con un grosor inferior a 0.4, o si el diámetro es menor o igual a 1.4
-    pero mayor que 0.8, con un grosor inferior a 0.25, deberá mostrarse el mensaje “El grosor para esta
-    rueda es inferior al recomendado”</p>
-    <p>Crea un programa en que se definan variables para el precio por kilómetro, el vehículo y los
-    kilómetros recorridos. El vehículo y los kilómetros recorridos deben ser proporcionados por el usuario. A
-    continuación, el programa debe realizar los cálculos para obtener el total a pagar, teniendo en cuenta las
-    siguientes consideraciones: si el vehículo es “coche”, el precio por kilómetro ha de ser 0.10, si es “moto”
-    ha de ser 0.20 y si es “autobús”, 0.5.</p>
+    <div>
+        <p>7. Crear un número aleatorio entre el 1 y 20 y comprobar si es par o impar. Mostrar además el número.</p>
+        <fieldset>
+            <legend></legend>
+            <button id="button7a" onclick="randomNumber()">PASO 1: DIME UN NÚMERO DEL 1 Y 20</button>
+            <button id="button7b" onclick="isEvenOrOdd()" disabled>PASO 2: ¿EL NÚMERO ES PAR O IMPAR?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultado:</legend>
+            <p id="result7a"></p>
+            <p id="result7b"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>8. Crea un programa que lea tres notas de un alumno, calcule la media e indique si ha aprobado o no.</p>
+        <fieldset>
+            <legend>Notas del alumno:</legend>
+            <label for="ej8dato1">Nota 1: </label>
+            <input type="number" id="ej8dato1" placeholder="1" min="1" max="10">
+            <label for="ej8dato2">Nota 2: </label>
+            <input type="number" id="ej8dato2" placeholder="1" min="1" max="10">
+            <label for="ej8dato3">Nota 3: </label>
+            <input type="number" id="ej8dato3" placeholder="1" min="1" max="10">
+            <button id="button8" onclick="rateTheStudent()">¿CÓMO HA IDO?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultado del alumno:</legend>
+            <p id="result8"></p>
+        </fieldset>
+        <p>En este ejercicio la nota media se expresa con dos decimales aproximando a la centésima más próxima. Los baremos usados son: de 0 a 4.9 suspenso, de 5 a 6.9 aprobado, de 7 a 8.9 notable, de 9 a 10 sobresaliente.</p>
+    </div>
+
+    <div>
+        <p>9. Crea un programa para una tienda de coches: si el coche a la venta es un Ford Fiesta, el descuento es de un 5 %. Si el coche a la venta es un Ford Focus, el descuento es del 10 %. El usuario introduce marca y modelo y el programa saca el descuento correspondiente por pantalla.</p>
+        <fieldset>
+            <legend>Coches en ventas:</legend>
+            <label for="ej9dato1">Marca: </label>
+            <select id="marcas">
+                <option value="BMW">BMW</option>
+                <option value="Ford">Ford</option>
+                <option value="Volkswagen">Volkswagen</option>
+            </select>
+            <label for="ej9dato2">Modelos: </label>
+            <select id="modelos">
+            </select>
+            <button id="button9" onclick="calcDiscount()">CALCULAR DESCUENTO</button>
+        </fieldset>
+        <fieldset>
+            <legend>Descuento:</legend>
+            <p id="result9"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>10. Crea un programa en el que el usuario introduzca el número del mes (del 1 al 12) y el código
+        responda cuántos días tiene ese mes.</p>
+    </div>
+
+    <div>
+        <p>11. Crea un script que pida al usuario el diámetro de una rueda y su grosor (en metros) y realice las
+        siguientes operaciones:</p>
+
+        <p>a) Si el diámetro es superior a 1.4 metros debe mostrarse el mensaje “La rueda es para un vehículo
+        grande”. Si es menor o igual a 1.4 metros pero mayor que 0.8 debe mostrarse el mensaje “La rueda
+        es para un vehículo mediano”. Si no se cumplen ninguna de las condiciones anteriores debe
+        mostrarse por pantalla el mensaje “La rueda es para un vehículo pequeño”.</p>
+
+        <p>b) Si el diámetro es superior a 1.4 con un grosor inferior a 0.4, o si el diámetro es menor o igual a 1.4
+        pero mayor que 0.8, con un grosor inferior a 0.25, deberá mostrarse el mensaje “El grosor para esta
+        rueda es inferior al recomendado”</p>
+    </div>
+
+    <div>
+        <p>12. Crea un programa en que se definan variables para el precio por kilómetro, el vehículo y los
+        kilómetros recorridos. El vehículo y los kilómetros recorridos deben ser proporcionados por el usuario. A
+        continuación, el programa debe realizar los cálculos para obtener el total a pagar, teniendo en cuenta las
+        siguientes consideraciones: si el vehículo es “coche”, el precio por kilómetro ha de ser 0.10, si es “moto”
+        ha de ser 0.20 y si es “autobús”, 0.5.</p>
+    </div>
 
     <script src="./js/solutions.js"></script>
 </body>
