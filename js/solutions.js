@@ -170,4 +170,65 @@ const calcDiscount = () => {
     document.getElementById("result9").innerHTML = `El descuento para el coche de marca: ${marcaelegida} y modelo ${modeloelegido} es ${coche.descuento}%`;
 }
 
+// Ejercicio 10: Cuántos días tiene el mes de XXXX?
+
+let mesescon30dias = [4, 6, 9, 11];
+let mesescon31dias = [1, 3, 5, 7, 8, 10, 12];
+let mesescon28dias = [2];
+
+const howManyDays = () => {
+    // get data
+    let mes = parseInt(document.getElementById("ej10dato1").value);
+    // Comprobamos primero si es un mes de 31 días, luego si es un mes de 30 y finalmente si es un mes de 28 días.
+    if (mesescon31dias.includes(mes)) {
+        document.getElementById("result10").innerHTML = `El mes ${mes} tiene 31 días.`;
+    } else if (mesescon30dias.includes(mes)) {
+        document.getElementById("result10").innerHTML = `El mes ${mes} tiene 30 días.`;
+    } else {
+        document.getElementById("result10").innerHTML = `El mes ${mes} tiene 28 días (o 29 si el año es bisiestos).`;
+    }
+}
+
+
+// Ejercicio 11: Para que tipo de coche es esta rueda
+const analyzeTire = () => {
+    let diametro = parseFloat(document.getElementById("ej11dato1").value);
+    let grosor = parseFloat(document.getElementById("ej11dato2").value);
+    let msjRespuesta = ""; 
+
+    if (diametro > 1.4) {
+        msjRespuesta = "Esta rueda es para un vehículo grande";
+        if (grosor < 0.4) {
+            msjRespuesta = msjRespuesta + ", pero el grosor de la rueda es inferior al recomendado.";
+        }
+    } else if (diametro > 0.8 && diametro <= 1.4) {
+        msjRespuesta = "Esta rueda es para un vehículo mediano";
+        if (grosor < 0.25) {
+            msjRespuesta = msjRespuesta + ", pero el grosor de la rueda es inferior al recomendado.";
+        }
+    } else {
+        msjRespuesta = "La rueda es para un vehículo pequeño";
+    }
+    document.getElementById("result11").innerHTML = msjRespuesta;
+}
+
+// Ejercicio 12: Calcula el precio total
+const totalPrice = () => {
+
+    let precioKm = 0; 
+    switch (document.getElementById("ej12dato1").value) {
+        case "coche":
+            precioKm = 0.10;
+            break;
+        case "moto":
+            precioKm = 0.20;
+            break;
+        case "autobus":
+            precioKm = 0.5;
+            break;
+    }
+
+    let km = parseFloat(document.getElementById("ej12dato2").value);    
+    document.getElementById("result12").innerHTML = `El total a pagar es ${km * precioKm}`;
+}
 
