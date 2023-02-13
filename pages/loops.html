@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS Nivel Básico a Intermedio: BUCLES</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Ejercicios JS Nivel Básico a Intermedio</h1>
+    <p>Ejercicios de JavaScript realizados para el reto III del BootCamp FullStack Developer.</p>
+    <hr>
+    <h2>BUCLES</h2>
+
+    <div>
+        <p>1. Escribir un script que pida un valor entero y muestre en pantalla una lista de números desde el 0 al valor tecleado. Los números se separarán por comas.</p>
+        <fieldset>
+            <legend>Introduce un número entero mayor que 0:</legend>
+            <label for="ej1dato1">Número: </label>
+            <input type="number" id="ej1dato1" value="1" min="0">
+            <button id="button1" onclick="listNumbers()">LISTA</button>
+        </fieldset>
+        <fieldset>
+            <legend>Lista de números desde 0 hasta el número introducido:</legend>
+            <p id="result1"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>2. Hacer un programa que cuente de N en N hasta un número M proporcionado por el usuario. El usuario también ha de proporcionar N.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <label for="ej2dato1">N: </label>
+            <input type="number" id="ej2dato1" value="1" min="0">
+            <label for="ej2dato2">M: </label>
+            <input type="number" id="ej2dato2" value="1" min="0">
+            <button id="button2" onclick="count()">CONTAR</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result2"></p>
+        </fieldset>
+    </div>
+    
+    <div>
+        <p>3. Genera una lista con todos los números pares positivos por debajo del número tecleado por el usuario.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <label for="ej3dato1">N: </label>
+            <input type="number" id="ej3dato1" value="1" min="0">
+            <button id="button3" onclick="pairNumbers()">PARES</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result3"></p>
+        </fieldset>
+    </div>
+    
+    <div>
+        <p>4. Escribe la tabla de multiplicar de un número introducido por el usuario.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <label for="ej4dato1">N: </label>
+            <input type="number" id="ej4dato1" value="1" min="0">
+            <button id="button4" onclick="multiply()">TABLA</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result4"></p>
+        </fieldset>
+    </div>
+    
+    <div>
+        <p>5. Formar un triángulo de este estilo
+        *
+        **
+        ***
+        ****
+        Con la cantidad de líneas que indique el usuario.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <label for="ej5dato1">N: </label>
+            <input type="number" id="ej5dato1" value="1" min="0">
+            <button id="button5" onclick="draw()">DIBUJAR</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result5"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>6. Calcula la suma de todos los números enteros positivos entre 0 y el número tecleado por el usuario.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <label for="ej6dato1">N: </label>
+            <input type="number" id="ej6dato1" value="1" min="0">
+            <button id="button6" onclick="suma()">SUMAR</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result6"></p>
+        </fieldset>
+    </div>
+    
+    <div>
+        <p>7. Pide al usuario que teclee 4 números (uno cada vez). Con esos números el programa deberá calcular la media aritmética (la suma de todos ellos dividido por la cantidad de números).</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <label for="ej7dato1">Número 1: </label>
+            <input type="number" id="ej7dato1" value="1" min="0">
+            <label for="ej7dato2">Número 2: </label>
+            <input type="number" id="ej7dato2" value="1" min="0">
+            <label for="ej7dato3">Número 3: </label>
+            <input type="number" id="ej7dato3" value="1" min="0">
+            <label for="ej7dato4">Número 4: </label>
+            <input type="number" id="ej7dato4" value="1" min="0">
+            <button id="button7" onclick="average()">MEDIA ARITMÉTICA</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result7"></p>
+        </fieldset>
+    </div>
+    
+    <div>
+        <p>8. Saca por consola los números primos del 0 al número que introduzca un usuario por prompt.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <label for="ej8dato1">Número 1: </label>
+            <input type="number" id="ej8dato1" placeholder="0" value="0" min="0">
+            <button id="button8" onclick="isPrimeNumber()">NÚMEROS PRIMOS</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result8"></p>
+        </fieldset>
+    </div>
+    
+    <div>
+        <p>9. Dado un número entero, muestra una cuenta atrás desde el número tecleado hasta el 0. Modifica el programa para que el usuario introduzca dos números y se efectúe una cuenta atrás desde e primer número hasta el segundo. Modifícalo de nuevo para que el programa determine qué número esel mayor y cuente desde el mayor hasta el menor</p>
+        <fieldset>
+            <legend>Dado un número entero:</legend>
+            <label for="ej9dato1">Número 1: </label>
+            <input type="number" id="ej9dato1" placeholder="Ej. 100" min="0">
+            <button id="button9a" onclick="cuentaHasta0()">CUENTA ATRAS -> 0</button>
+        </fieldset>
+        <fieldset>
+            <legend>... muestra una cuenta atras desde el número tecleado hasta el 0:</legend>
+            <p id="result9a"></p>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>Dado dos números:</legend>
+            <label for="ej9dato2">Número 1: </label>
+            <input type="number" id="ej9dato2" placeholder="Ej. 100" min="0">
+            <label for="ej9dato3">Número 2: </label>
+            <input type="number" id="ej9dato3" placeholder="Ej. 100" min="0">
+            <button id="button9b" onclick="cuentaDeAaB()">CUENTA ATRAS DE A -> B</button>
+        </fieldset>
+        <fieldset>
+            <legend>... muestra la cuenta atrás desde el primer número hasta el segundo:</legend>
+            <p id="result9b"></p>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>Dado dos números:</legend>
+            <label for="ej9dato4">Número 1: </label>
+            <input type="number" id="ej9dato4" placeholder="Ej. 100" min="0">
+            <label for="ej9dato5">Número 2: </label>
+            <input type="number" id="ej9dato5" placeholder="Ej. 100" min="0">
+            <button id="button9c" onclick="cualEsMayor()">CUÁL ES EL MAYOR</button>
+            <button id="button9d" onclick="cuentaDeMayorAMenor()">CUENTA ATRAS MAYOR -> MENOR</button>
+        </fieldset>
+        <fieldset>
+            <legend>... muestra cuál es el mayor y cuenta atras hasta el menor:</legend>
+            <p id="result9c"></p>
+            <p id="result9d"></p>
+        </fieldset>
+    </div>
+    
+    <div>
+        <p>10. Pide al usuario cinco números, almacénalos en un array y muestra por consola el resultado de cada uno de ellos multiplicado por 3. Muestra también un array que contenga todos los resultados.</p>
+        <fieldset>
+            <legend>Dado 5 números:</legend>
+            <label for="ej10dato1">Número 1: </label>
+            <input type="number" id="ej10dato1" placeholder="Ej. 100" min="0">
+            <label for="ej10dato2">Número 2: </label>
+            <input type="number" id="ej10dato2" placeholder="Ej. 100" min="0">
+            <label for="ej10dato3">Número 3: </label>
+            <input type="number" id="ej10dato3" placeholder="Ej. 100" min="0">
+            <label for="ej10dato4">Número 4: </label>
+            <input type="number" id="ej10dato4" placeholder="Ej. 100" min="0">
+            <label for="ej10dato5">Número 5: </label>
+            <input type="number" id="ej10dato5" placeholder="Ej. 100" min="0">
+            <button id="button10a" onclick="createArray()">CREA UN ARRAY</button>
+            <button id="button10b" onclick="createNewArray()">CREA UN NUEVO ARRAY</button>
+        </fieldset>
+        <fieldset>
+            <legend>... muestra cuál es el mayor y cuenta atras hasta el menor:</legend>
+            <p id="result10a"></p>
+            <p id="result10b"></p>
+        </fieldset>
+    </div>
+    
+    <script src="../js/loops.js"></script>
+</body>
+</html>
