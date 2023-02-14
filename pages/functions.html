@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS Nivel Básico a Intermedio: FUNCIONES</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Ejercicios JS Nivel Básico a Intermedio</h1>
+    <p>Ejercicios de JavaScript realizados para el reto III del BootCamp FullStack Developer.</p>
+    <hr>
+    <h2>FUNCIONES</h2>
+
+    <div>
+        <p>1. Crea una función que convierta grados celsius a grados fahrenheit.</p>
+        <fieldset>
+            <legend>Grados Celsius</legend>
+            <label for="ej1dato1"><sup>o</sup>C:</label>
+            <input type="number" id="ej1dato1" placeholder="Ej. 5">
+            <button id="button1" onclick="convertToFahrenheit()">CONVERTIR -> ºF</button>
+        </fieldset>
+        <fieldset>
+            <legend>Grados Fahrenheit</legend>
+            <p id="result1"><sup>o</sup>F: </p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>2. Crea una función que determine si un número es par o impar.</p>
+        <fieldset>
+            <legend>Entrada:</legend>
+            <label for="ej2dato1">Número 1: </label>
+            <input type="number" id="ej2dato1" min="0">
+            <button id="button2" onclick="isEvenOrOdd()">¿ES PAR O IMPAR?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultado:</legend>
+            <p id="result2"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>3. Crea una función que determine si un número es primo o no.</p>
+        <fieldset>
+            <legend>Entrada:</legend>
+            <label for="ej3dato1">Número: </label>
+            <input type="number" id="ej3dato1">
+            <button id="button3" onclick="isPrime()">¿ES UN NÚMERO PRIMO?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultado:</legend>
+            <p id="result3"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>4. Crea una función que reciba un número de dni como parámetro, y devuelva la letra del mismo. Si el dni tiene algún error debe comunicarlo. Recuerda que el array de letras de DNI es [TRWAGMYFPDXBNJZSQVHLCKE].</p>
+        <fieldset>
+            <legend>Entrada:</legend>
+            <label for="ej4dato1">DNI (solo números): </label>
+            <input type="text" id="ej4dato1" placeholder="26664245">
+            <button id="butto4" onclick="getDNIletter()">¿CUÁL ES LA LETRA?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultado:</legend>
+            <p id="result4"></p>
+        </fieldset>
+    </div>
+    
+    <div>
+        <p>5. Crea una función que reciba 2 parámetros, precio e iva, y devuelva el precio con iva incluido. Si no recibe el iva, aplicará el 21 por ciento por defecto.</p>
+        <fieldset>
+            <legend>Entrada:</legend>
+            <label for="ej5dato1">Precio (€): </label>
+            <input type="number" id="ej5dato1" placeholder="10.00" min="1">
+            <label for="ej5dato2">IVA (por defecto se aplicará el 21%): </label>
+            <input type="number" id="ej5dato2" placeholder="21" min="1">
+            <button id="button5" onclick="calculaImporte()">PRECIO TOTAL</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultado:</legend>
+            <p id="result5"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>6. Crea una función que determine si una letra es una vocal o una consonante.</p>
+        <fieldset>
+            <legend>Entrada:</legend>
+            <label for="ej6dato1">Letra: </label>
+            <input type="text" id="ej6dato1" placeholder="Ej. A">
+            <button id="button6" onclick="esVocal()">¿ES UNA VOCAL O CONSONANTE?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultado:</legend>
+            <p id="result6"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>7. Crea una función que, dada una frase, convierta las A en 4, las E en 3, las I en 1 y las O en 0.</p>
+        <fieldset>
+            <legend>Diga una frase:</legend>
+            <label for="ej7dato1">Frase: </label>
+            <input type="text" id="ej7dato1" placeholder="Ej. Supercalifragilistico">
+            <button id="button7" onclick="encrypt()">ENCRIPTAR</button>
+        </fieldset>
+        <fieldset>
+            <legend>Frase encriptada:</legend>
+            <p id="result7"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>8. Crea una función que, dada una frase, cuente la cantidad de una letra en la misma. Por ejemplo, dada la palabra “javascript” y la letra “a”, debería devolver un 2.</p>
+        <fieldset>
+            <legend>Datos de entrada:</legend>
+            <label for="ej8dato1">Introduce una frase:</label>
+            <input type="text" id="ej8dato1" placeholder="Ej. Lorem ipsum ...">
+            <label for="ej8dato2">¿Qué letra quieres buscar?:</label>
+            <input type="text" id="ej8dato2" placeholder="Ej. a">
+            <button id="button8" onclick="countLetter()">¿CUANTAS VECES APARECE?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Cantidad de veces que aparece:</legend>
+            <p id="result8"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>9. Crea una función que, dado un array de números, devuelva el número más grande del mismo.</p>
+        <fieldset>
+            <legend>Introduce varios números separados por coma:</legend>
+            <label for="ej9dato1">Lista de números (,):</label>
+            <input type="text" id="ej9dato1" placeholder="Ej. 3,60,12,0,34">
+            <button id="button9" onclick="maxAray()">¿EL MAYOR?</button>
+        </fieldset>
+        <fieldset>
+            <legend>El número mayor es:</legend>
+            <p id="result9"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>10. Crea una función que, dado un array de números, devuelva la suma de todos los números que contiene.</p>
+        <fieldset>
+            <legend>Introduce varios números separados por coma:</legend>
+            <label for="ej10dato1">Lista de números (,):</label>
+            <input type="text" id="ej10dato1" placeholder="Ej. 3,60,12,0,34">
+            <button id="button10" onclick="sumaArray()">SUMA LOS NÚMEROS</button>
+        </fieldset>
+        <fieldset>
+            <legend>La suma de los números es:</legend>
+            <p id="result10"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>11. Crea una función que, dados dos números A y B, obtenga el porcentaje(B) de un número(A).</p>
+        <fieldset>
+            <legend>Entrada de datos:</legend>
+            <label for="ej11dato1">Número A: </label>
+            <input type="number" id="ej11dato1" placeholder="Ej. 1" min="1">
+            <label for="ej11dato2">Número B: </label>
+            <input type="number" id="ej11dato2" placeholder="Ej. 1" min="1">
+            <button id="button11" onclick="percentage()">¿PORCENTAJE (B) DE A?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result11"></p>
+        </fieldset>
+    </div>
+
+    <script src="../js/functions.js"></script>
+</body>
+</html>
